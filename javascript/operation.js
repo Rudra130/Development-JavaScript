@@ -11,3 +11,6 @@ game++;
 console.log(game)
 ++game
 console.log(game);
+
+//strict check;
+console.log("2"===2)
