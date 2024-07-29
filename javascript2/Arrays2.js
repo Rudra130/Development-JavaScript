@@ -10,7 +10,7 @@ the push method will push all the array in the array
 
  
 /*
-this is concat method which only push the elemnt in the array
+this is concat method which only push the element in the array
 */
 
 // const newArr = [...arr1,...arr2]
