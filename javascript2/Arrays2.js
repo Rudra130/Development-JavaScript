@@ -13,8 +13,8 @@ the push method will push all the array in the array
 this is concat method which only push the element in the array
 */
 
-// const newArr = [...arr1,...arr2]
-// console.log(newArr)
+const newArr = [...arr1,...arr2]
+console.log(newArr)
 /*
 this is the spread operator which do same thing as concat thing
 */
