@@ -22,8 +22,8 @@ const obj6 ={5:"c" ,6:"d"}
 const obj3 = {obj1,obj2}
 
 const obj4 = Object.assign({},obj1,obj2,obj6)
-//this empty object is give because all the object obj1
-// , obj2 , obj3 assign to this empty object in javascript
+//this empty object is give because all the object 
+//obj1, obj2 , obj3 assign to this empty object in javascript
 
 
 //this is spread operator to merge the object in java
