@@ -5,11 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom learning</title>
 </head>
-<body>
+<body style="background-color: #212121; color : #fff">
     <div class="cl">
         <h1> Dom learning on chai or code</h1>
         <p>this is html file</p>
-    </div>
+    <div class="list">Sunday</div>
+    <div class="list">Monday</div>
+    <div class="list">Tuesday</div>
+    <div class="list">Wednesday</div>
+</div>
+
+
+    
+
+    
     
 </body>
+<script>
+
+    const list = document.querySelector('.cl')
+    console.log(list)
+    console.log(list.children)
+
+    for(let  i=0; i<list.children.length ; i++){
+        list.children[i].style.backgroundColor ='blue'
+
+       
+    }
+   
+   function f(){
+    const div = document.createElement('div')
+    div.className="main"
+    div.id=Math.round(Math.random()*10+1)
+    div.style.backgroundColor='green'
+
+    div.style.width='100px'
+    div.style.padding='10px'
+    div.style.marginTop='10px'
+    div.style.borderRadius="10px"
+   const c=  document.createTextNode("Click me")
+   div.appendChild(c)
+  return document.body.appendChild(div);
+   }
+
+   for(let i=0; i<5 ;i++){
+    const ele = f()
+    ele.innerText="hello world"
+   }
+    
+ 
+
+</script>
 </html>
