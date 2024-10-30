@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="color" , id="box">
          <h2>Random Color Generator</h2>
          <h3>How it Works</h3>
@@ -21,6 +20,9 @@
             <li>
                 and color will show the screen
             </li>
+            <li>
+                click on stop to stopm the generation of code
+            </li>
         </ul>
         <h3>the generated color is <span id="hex"> </span></h3>
         <button id="btn">Generate color</button>
@@ -33,13 +35,12 @@
 <script>
     let hex;
     let intervalId;
+    
 
     function getRandomHexColor() {
         return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
     } 
-    
 
-    
 
     function implement(){
          hex = getRandomHexColor();
@@ -47,17 +48,21 @@
         document.getElementById('box').style.backgroundColor=hex;   
     }
     function start(){
-      intervalId=  setInterval(implement,100)
+        if (intervalId) {
+            clearInterval(intervalId); 
+        }
+      intervalId=  setInterval(implement,1000)
     }
-
-
+   
     document.getElementById('btn').addEventListener('click',start)
+   
+  
     document.getElementById('stop').addEventListener('click',()=>{
         clearInterval(intervalId)
+        intervalId=null
+        
     })
-
-    
-
+   
 
 
 </script>
