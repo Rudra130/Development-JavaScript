@@ -13,6 +13,8 @@
         <p id="count">0</p>
     </div>
 
+    
+
 
       
 </body>
@@ -31,6 +33,7 @@
         document.getElementById('count').innerHTML=ct;
         change1()
     });
-    setInterval(change,2000)
+     const changeMe = setTimeout(change,2000)
+    clearTimeout(changeMe)
 </script>
 </html>
