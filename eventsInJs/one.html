@@ -9,6 +9,9 @@
 <body>
     <h1>Rudra preet</h1>
     <button id="btn">Click me</button> 
+    <div class="counter">
+        <p id="count">0</p>
+    </div>
 
 
       
@@ -22,7 +25,11 @@
         document.querySelector('h1').innerHTML="rudra preet"
     }
     document.getElementById('btn').addEventListener('click',()=>{
-         change1()
+        let c= document.getElementById('count').innerHTML
+        let ct = parseInt(c)
+        ct++
+        document.getElementById('count').innerHTML=ct;
+        change1()
     });
     setInterval(change,2000)
 </script>
