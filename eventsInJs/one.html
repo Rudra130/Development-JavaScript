@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchounous</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rudra preet</h1>
+    <button id="btn">Click me</button> 
+
+
+      
+</body>
+
+<script>
+    function change(){
+        document.querySelector('h1').innerHTML="rptiwarix"
+    }
+    function change1(){
+        document.querySelector('h1').innerHTML="rudra preet"
+    }
+    document.getElementById('btn').addEventListener('click',()=>{
+         change1()
+    });
+    setInterval(change,2000)
+</script>
+</html>
