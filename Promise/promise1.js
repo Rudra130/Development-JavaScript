@@ -32,14 +32,60 @@ const p2 = new Promise((resolve,reject)=>{
 });
 
 p2.then((user)=>{
-    return user.name;
+    const{name,password}=user
+    return name;
 }).then((name)=>{
     console.log(name)
 }).catch((error)=>{
     console.log(error)
 }).finally(()=>{
-    console.log("this is finnaly block")
+    console.log("The promise is resolve or rejected")
 })
+
+async function consume(){
+
+    try{
+        const res = await p2
+        console.log(res)
+    }catch(error){
+        console.log(error)
+    }
+}
+
+consume()
+
+
+async function getAllUsers() {
+
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json()
+        console.log(data)
+    }catch(error){
+        console.log("E:error")
+    }
+}
+getAllUsers()
+
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+     return response.json()
+})
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=> console.log(error))
+
+
+
+
+
+
+
+
+
 
 
 
